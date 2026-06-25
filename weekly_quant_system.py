@@ -50,31 +50,40 @@ def run_analysis(ticker, start_date, end_date):
     
     print(f"Final Portfolio Value: {cerebro.broker.getvalue():.2f}")
     
-    # Save the final signal to CSV as required by Step 5
-    signal_df = pd.DataFrame([{"ticker": ticker, "signal": strat.signal}])
-    signal_df.to_csv("weekly_target_trade.csv", index=False)
-    print("Signal saved to weekly_target_trade.csv")
-
     # 3. Plot results
     cerebro.plot()
 
+    return strat.signal
+
 def get_params_from_csv():
     """
-    Fetches ticker, start_date, and end_date from a local input.csv file.
+    Fetches all tickers, start_dates, and end_dates from a local input.csv file.
     """
     try:
-        df = pd.read_csv("input.csv")
-        ticker = df.iloc[0]['ticker']
-        start_date = df.iloc[0]['start_date']
-        end_date = df.iloc[0]['end_date']
-        return ticker, start_date, end_date
+        return pd.read_csv("input.csv")
     except Exception as e:
         print(f"Error reading parameters from input.csv: {e}")
         print("Falling back to default parameters.")
-        return "SPY", "2018-01-01", "2026-06-25"
+        return pd.DataFrame([{"ticker": "SPY", "start_date": "2018-01-01", "end_date": "2026-06-25"}])
 
 if __name__ == "__main__":
     # Fetch parameters dynamically from input.csv
-    ticker, start, end = get_params_from_csv()
-    print(f"Using parameters: Ticker={ticker}, Start={start}, End={end}")
-    run_analysis(ticker, start, end)
+    params_df = get_params_from_csv()
+    
+    all_signals = []
+    
+    for index, row in params_df.iterrows():
+        ticker = row['ticker']
+        start = row['start_date']
+        end = row['end_date']
+        print(f"\n--- Analyzing {ticker} (Start: {start}, End: {end}) ---")
+        
+        signal = run_analysis(ticker, start, end)
+        if signal:
+            all_signals.append({"ticker": ticker, "signal": signal})
+    
+    # Save all signals to CSV
+    if all_signals:
+        results_df = pd.DataFrame(all_signals)
+        results_df.to_csv("weekly_target_trade.csv", index=False)
+        print("\nAll signals saved to weekly_target_trade.csv")
