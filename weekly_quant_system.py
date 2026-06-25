@@ -58,26 +58,23 @@ def run_analysis(ticker, start_date, end_date):
     # 3. Plot results
     cerebro.plot()
 
-def get_params_from_google_sheet():
+def get_params_from_csv():
     """
-    Fetches ticker, start_date, and end_date from a Google Sheet via CSV export.
+    Fetches ticker, start_date, and end_date from a local input.csv file.
     """
-    sheet_url = "https://docs.google.com/spreadsheets/d/1z77lJoWIj3Uufd60J6IK0srcYq8Vw1QZ1NwkHHl1e0g/export?format=csv&gid=0"
     try:
-        df = pd.read_csv(sheet_url)
-        # Assuming the sheet has columns: ticker, start_date, end_date
-        # If the sheet has no headers, we would use header=None and access by index
+        df = pd.read_csv("input.csv")
         ticker = df.iloc[0]['ticker']
         start_date = df.iloc[0]['start_date']
         end_date = df.iloc[0]['end_date']
         return ticker, start_date, end_date
     except Exception as e:
-        print(f"Error fetching parameters from Google Sheet: {e}")
+        print(f"Error reading parameters from input.csv: {e}")
         print("Falling back to default parameters.")
         return "SPY", "2018-01-01", "2026-06-25"
 
 if __name__ == "__main__":
-    # Fetch parameters dynamically from Google Sheet
-    ticker, start, end = get_params_from_google_sheet()
+    # Fetch parameters dynamically from input.csv
+    ticker, start, end = get_params_from_csv()
     print(f"Using parameters: Ticker={ticker}, Start={start}, End={end}")
     run_analysis(ticker, start, end)
