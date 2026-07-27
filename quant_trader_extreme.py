@@ -60,7 +60,7 @@ def execute_monday_rebalance(multiplier=1):
         
         # Fetch current broker account positions
         current_positions = trading_client.get_all_positions()
-        holding_ticker = any(pos.symbol == ticker for pos in current_positions)
+        holding_ticker = False # any(pos.symbol == ticker for pos in current_positions)
         
         # Execute Order Logic based on the payload contract
         if action == "HOLD":
@@ -68,7 +68,11 @@ def execute_monday_rebalance(multiplier=1):
             continue
             
         # Calculate quantity based on signal strength
-        strength = float(trade_row.get('strength', 0))
+        strength = trade_row.get('strength', 0)
+        if pd.isna(strength):
+            strength = 0.0
+        else:
+            strength = float(strength)
         qty = math.ceil(BASE_QTY * strength * multiplier)
         
         if qty <= 0:
