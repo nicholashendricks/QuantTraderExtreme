@@ -7,8 +7,7 @@ import yfinance as yf
 def run_analysis(ticker, start_date, end_date, window=20, use_weekly=False):
     """Vectorized quantitative strategy evaluator.
 
-    Calculates SMA crossover signals, position states, and normalized z-score
-    strength without iterative loops.
+    Ensures clean 1D Series extraction for close prices to prevent NaN bug.
     """
     print(f"Fetching data for {ticker}...")
     try:
@@ -17,25 +16,37 @@ def run_analysis(ticker, start_date, end_date, window=20, use_weekly=False):
         print(f" Failed to fetch data for {ticker}: {e}")
         return None
 
-    # Flatten MultiIndex columns if present (handles yfinance API updates)
-    if isinstance(data.columns, pd.MultiIndex):
-        data.columns = data.columns.get_level_values(0)
+    if data.empty:
+        print(f" Insufficient data points for {ticker}.")
+        return None
 
-    if data.empty or len(data) < window + 1:
+    # Handle MultiIndex or multi-column data structures safely
+    if isinstance(data.columns, pd.MultiIndex):
+        data = data.xs(ticker, axis=1, level=1) if ticker in data.columns.levels[1] else data.droplevel(1, axis=1)
+
+    # Extract Close safely as a 1D Series
+    if 'Close' in data.columns:
+        close = data['Close']
+    elif 'Adj Close' in data.columns:
+        close = data['Adj Close']
+    else:
+        print(f" Could not find Close price for {ticker}.")
+        return None
+
+    # If close is a DataFrame (e.g. single-column DF), convert to Series
+    if isinstance(close, pd.DataFrame):
+        close = close.squeeze()
+
+    # Drop any leading NaN rows from yfinance feed
+    close = close.dropna()
+
+    if len(close) < window + 1:
         print(f" Insufficient data points for {ticker}.")
         return None
 
     # Optional: Resample daily data to weekly Friday-close bars
     if use_weekly:
-        data = data.resample('W-FRI').agg({
-            'Open': 'first',
-            'High': 'max',
-            'Low': 'min',
-            'Close': 'last',
-            'Volume': 'sum',
-        }).dropna()
-
-    close = data['Close']
+        close = close.resample('W-FRI').last().dropna()
 
     # Rolling calculations
     sma = close.rolling(window=window).mean()
@@ -73,12 +84,12 @@ def run_analysis(ticker, start_date, end_date, window=20, use_weekly=False):
     else:
         signal = 'HOLD_CASH'
 
-    # Unbounded percentage distance (retained for backward compatibility)
-    pct_dist = (latest_close - latest_sma) / latest_sma
+    # Unbounded percentage distance
+    pct_dist = (latest_close - latest_sma) / latest_sma if latest_sma != 0 else 0.0
 
     return {
         'ticker': ticker,
-        'evaluation_date': data.index[-1].strftime('%Y-%m-%d'),
+        'evaluation_date': close.index[-1].strftime('%Y-%m-%d'),
         'signal': signal,
         'z_score_strength': round(float(latest_z), 2) if pd.notna(latest_z) else 0.0,
         'pct_distance': round(float(pct_dist), 4),

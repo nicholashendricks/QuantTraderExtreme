@@ -1,0 +1,856 @@
+[Mon 07/27/2026 15:09:20.99] Starting Weekly Quant Analysis... 
+=== Starting Quant System Run (30 tickers) ===
+
+Fetching data for SPY...
+Fetching data for QQQ...
+Fetching data for DIA...
+Fetching data for XLK...
+Fetching data for XLV...
+Fetching data for XLF...
+Fetching data for XLY...
+Fetching data for XLP...
+Fetching data for XLE...
+Fetching data for XLI...
+Fetching data for XLB...
+Fetching data for XLRE...
+Fetching data for XLU...
+Fetching data for XLC...
+Fetching data for EEM...
+Fetching data for VWO...
+Fetching data for VEA...
+Fetching data for IEFA...
+Fetching data for VT...
+Fetching data for ACWI...
+Fetching data for EWJ...
+Fetching data for VGK...
+Fetching data for IEUR...
+Fetching data for MCHI...
+Fetching data for FXI...
+Fetching data for INDA...
+Fetching data for EWC...
+Fetching data for EWU...
+Fetching data for EWA...
+Fetching data for EWZ...
+
+=== Output Summary ===
+ticker evaluation_date    signal  z_score_strength  close
+   SPY      2026-07-24   NEW_BUY              0.58 738.18
+   QQQ      2026-07-24   NEW_BUY              0.31 691.96
+   DIA      2026-07-24   NEW_BUY              0.83 516.26
+   XLK      2026-07-24   NEW_BUY              0.57 178.45
+   XLV      2026-07-24   NEW_BUY              1.54 161.44
+   XLF      2026-07-24   NEW_BUY              1.51  55.83
+   XLY      2026-07-24  NEW_SELL             -1.33 108.76
+   XLP      2026-07-24   NEW_BUY              0.02  83.21
+   XLE      2026-07-24   NEW_BUY              1.07  59.38
+   XLI      2026-07-24   NEW_BUY              1.23 181.94
+   XLB      2026-07-24 HOLD_CASH             -0.25  50.29
+  XLRE      2026-07-24   NEW_BUY              0.92  44.95
+   XLU      2026-07-24   NEW_BUY              0.99  46.19
+   XLC      2026-07-24 HOLD_CASH             -1.87 105.38
+   EEM      2026-07-24   NEW_BUY              0.24  64.60
+   VWO      2026-07-24   NEW_BUY              0.13  58.10
+   VEA      2026-07-24   NEW_BUY              0.42  69.78
+  IEFA      2026-07-24   NEW_BUY              0.52  95.76
+    VT      2026-07-24   NEW_BUY              0.52 154.31
+  ACWI      2026-07-24   NEW_BUY              0.53 154.34
+   EWJ      2026-07-24   NEW_BUY              0.39  91.10
+   VGK      2026-07-24   NEW_BUY              0.61  87.83
+  IEUR      2026-07-24   NEW_BUY              0.60  74.42
+  MCHI      2026-07-24 HOLD_CASH             -0.70  53.35
+   FXI      2026-07-24 HOLD_CASH             -0.30  34.46
+  INDA      2026-07-24  NEW_SELL             -0.72  47.63
+   EWC      2026-07-24   NEW_BUY              0.87  58.82
+   EWU      2026-07-24   NEW_BUY              0.67  46.70
+   EWA      2026-07-24   NEW_BUY              0.16  28.49
+   EWZ      2026-07-24 HOLD_CASH             -0.13  36.17
+
+Saved full signals payload to weekly_target_trade.csv
+[Mon 07/27/2026 15:09:31.46] Analysis completed. Executing Alpaca Trader... 
+--- STARTING QUANT TRADER EXTREME RUN (Multiplier: 1.0x) ---
+[-] Error fetching account positions: {"message": "unauthorized."}
+
+
+[*] Processing Signal -- Ticker: SPY | Action: NEW_BUY | Z-Strength: 0.58
+[!] Warning: Could not verify pending orders for SPY: {"message": "unauthorized."}
+
+[-] Error fetching price for SPY: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for SPY. Skipping buy.
+
+[*] Processing Signal -- Ticker: QQQ | Action: NEW_BUY | Z-Strength: 0.31
+[!] Warning: Could not verify pending orders for QQQ: {"message": "unauthorized."}
+
+[-] Error fetching price for QQQ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for QQQ. Skipping buy.
+
+[*] Processing Signal -- Ticker: DIA | Action: NEW_BUY | Z-Strength: 0.83
+[!] Warning: Could not verify pending orders for DIA: {"message": "unauthorized."}
+
+[-] Error fetching price for DIA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for DIA. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLK | Action: NEW_BUY | Z-Strength: 0.57
+[!] Warning: Could not verify pending orders for XLK: {"message": "unauthorized."}
+
+[-] Error fetching price for XLK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLK. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLV | Action: NEW_BUY | Z-Strength: 1.54
+[!] Warning: Could not verify pending orders for XLV: {"message": "unauthorized."}
+
+[-] Error fetching price for XLV: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLV. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLF | Action: NEW_BUY | Z-Strength: 1.51
+[!] Warning: Could not verify pending orders for XLF: {"message": "unauthorized."}
+
+[-] Error fetching price for XLF: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLF. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLY | Action: NEW_SELL | Z-Strength: -1.33
+[!] Warning: Could not verify pending orders for XLY: {"message": "unauthorized."}
+
+[+] Liquidation requested for XLY, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: XLP | Action: NEW_BUY | Z-Strength: 0.02
+[!] Warning: Could not verify pending orders for XLP: {"message": "unauthorized."}
+
+[-] Error fetching price for XLP: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLP. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLE | Action: NEW_BUY | Z-Strength: 1.07
+[!] Warning: Could not verify pending orders for XLE: {"message": "unauthorized."}
+
+[-] Error fetching price for XLE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLI | Action: NEW_BUY | Z-Strength: 1.23
+[!] Warning: Could not verify pending orders for XLI: {"message": "unauthorized."}
+
+[-] Error fetching price for XLI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLI. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLB | Action: HOLD_CASH | Z-Strength: -0.25
+[!] Warning: Could not verify pending orders for XLB: {"message": "unauthorized."}
+
+[+] Posture nominal for XLB (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: XLRE | Action: NEW_BUY | Z-Strength: 0.92
+[!] Warning: Could not verify pending orders for XLRE: {"message": "unauthorized."}
+
+[-] Error fetching price for XLRE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLRE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLU | Action: NEW_BUY | Z-Strength: 0.99
+[!] Warning: Could not verify pending orders for XLU: {"message": "unauthorized."}
+
+[-] Error fetching price for XLU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLU. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLC | Action: HOLD_CASH | Z-Strength: -1.87
+[!] Warning: Could not verify pending orders for XLC: {"message": "unauthorized."}
+
+[+] Posture nominal for XLC (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: EEM | Action: NEW_BUY | Z-Strength: 0.24
+[!] Warning: Could not verify pending orders for EEM: {"message": "unauthorized."}
+
+[-] Error fetching price for EEM: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EEM. Skipping buy.
+
+[*] Processing Signal -- Ticker: VWO | Action: NEW_BUY | Z-Strength: 0.13
+[!] Warning: Could not verify pending orders for VWO: {"message": "unauthorized."}
+
+[-] Error fetching price for VWO: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VWO. Skipping buy.
+
+[*] Processing Signal -- Ticker: VEA | Action: NEW_BUY | Z-Strength: 0.42
+[!] Warning: Could not verify pending orders for VEA: {"message": "unauthorized."}
+
+[-] Error fetching price for VEA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VEA. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEFA | Action: NEW_BUY | Z-Strength: 0.52
+[!] Warning: Could not verify pending orders for IEFA: {"message": "unauthorized."}
+
+[-] Error fetching price for IEFA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEFA. Skipping buy.
+
+[*] Processing Signal -- Ticker: VT | Action: NEW_BUY | Z-Strength: 0.52
+[!] Warning: Could not verify pending orders for VT: {"message": "unauthorized."}
+
+[-] Error fetching price for VT: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VT. Skipping buy.
+
+[*] Processing Signal -- Ticker: ACWI | Action: NEW_BUY | Z-Strength: 0.53
+[!] Warning: Could not verify pending orders for ACWI: {"message": "unauthorized."}
+
+[-] Error fetching price for ACWI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for ACWI. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWJ | Action: NEW_BUY | Z-Strength: 0.39
+[!] Warning: Could not verify pending orders for EWJ: {"message": "unauthorized."}
+
+[-] Error fetching price for EWJ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWJ. Skipping buy.
+
+[*] Processing Signal -- Ticker: VGK | Action: NEW_BUY | Z-Strength: 0.61
+[!] Warning: Could not verify pending orders for VGK: {"message": "unauthorized."}
+
+[-] Error fetching price for VGK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VGK. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEUR | Action: NEW_BUY | Z-Strength: 0.6
+[!] Warning: Could not verify pending orders for IEUR: {"message": "unauthorized."}
+
+[-] Error fetching price for IEUR: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEUR. Skipping buy.
+
+[*] Processing Signal -- Ticker: MCHI | Action: HOLD_CASH | Z-Strength: -0.7
+[!] Warning: Could not verify pending orders for MCHI: {"message": "unauthorized."}
+
+[+] Posture nominal for MCHI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: FXI | Action: HOLD_CASH | Z-Strength: -0.3
+[!] Warning: Could not verify pending orders for FXI: {"message": "unauthorized."}
+
+[+] Posture nominal for FXI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: INDA | Action: NEW_SELL | Z-Strength: -0.72
+[!] Warning: Could not verify pending orders for INDA: {"message": "unauthorized."}
+
+[+] Liquidation requested for INDA, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: EWC | Action: NEW_BUY | Z-Strength: 0.87
+[!] Warning: Could not verify pending orders for EWC: {"message": "unauthorized."}
+
+[-] Error fetching price for EWC: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWC. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWU | Action: NEW_BUY | Z-Strength: 0.67
+[!] Warning: Could not verify pending orders for EWU: {"message": "unauthorized."}
+
+[-] Error fetching price for EWU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWU. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWA | Action: NEW_BUY | Z-Strength: 0.16
+[!] Warning: Could not verify pending orders for EWA: {"message": "unauthorized."}
+
+[-] Error fetching price for EWA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWA. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWZ | Action: HOLD_CASH | Z-Strength: -0.13
+[!] Warning: Could not verify pending orders for EWZ: {"message": "unauthorized."}
+
+[+] Posture nominal for EWZ (HOLD_CASH). No trade required.
+[Mon 07/27/2026 15:12:00.54] Starting Weekly Quant Analysis... 
+=== Starting Quant System Run (30 tickers) ===
+
+Fetching data for SPY...
+Fetching data for QQQ...
+Fetching data for DIA...
+Fetching data for XLK...
+Fetching data for XLV...
+Fetching data for XLF...
+Fetching data for XLY...
+Fetching data for XLP...
+Fetching data for XLE...
+Fetching data for XLI...
+Fetching data for XLB...
+Fetching data for XLRE...
+Fetching data for XLU...
+Fetching data for XLC...
+Fetching data for EEM...
+Fetching data for VWO...
+Fetching data for VEA...
+Fetching data for IEFA...
+Fetching data for VT...
+Fetching data for ACWI...
+Fetching data for EWJ...
+Fetching data for VGK...
+Fetching data for IEUR...
+Fetching data for MCHI...
+Fetching data for FXI...
+Fetching data for INDA...
+Fetching data for EWC...
+Fetching data for EWU...
+Fetching data for EWA...
+Fetching data for EWZ...
+
+=== Output Summary ===
+ticker evaluation_date    signal  z_score_strength  close
+   SPY      2026-07-24   NEW_BUY              0.58 738.18
+   QQQ      2026-07-24   NEW_BUY              0.31 691.96
+   DIA      2026-07-24   NEW_BUY              0.83 516.26
+   XLK      2026-07-24   NEW_BUY              0.57 178.45
+   XLV      2026-07-24   NEW_BUY              1.54 161.44
+   XLF      2026-07-24   NEW_BUY              1.51  55.83
+   XLY      2026-07-24  NEW_SELL             -1.33 108.76
+   XLP      2026-07-24   NEW_BUY              0.02  83.21
+   XLE      2026-07-24   NEW_BUY              1.07  59.38
+   XLI      2026-07-24   NEW_BUY              1.23 181.94
+   XLB      2026-07-24 HOLD_CASH             -0.25  50.29
+  XLRE      2026-07-24   NEW_BUY              0.92  44.95
+   XLU      2026-07-24   NEW_BUY              0.99  46.19
+   XLC      2026-07-24 HOLD_CASH             -1.87 105.38
+   EEM      2026-07-24   NEW_BUY              0.24  64.60
+   VWO      2026-07-24   NEW_BUY              0.13  58.10
+   VEA      2026-07-24   NEW_BUY              0.42  69.78
+  IEFA      2026-07-24   NEW_BUY              0.52  95.76
+    VT      2026-07-24   NEW_BUY              0.52 154.31
+  ACWI      2026-07-24   NEW_BUY              0.53 154.34
+   EWJ      2026-07-24   NEW_BUY              0.39  91.10
+   VGK      2026-07-24   NEW_BUY              0.61  87.83
+  IEUR      2026-07-24   NEW_BUY              0.60  74.42
+  MCHI      2026-07-24 HOLD_CASH             -0.70  53.35
+   FXI      2026-07-24 HOLD_CASH             -0.30  34.46
+  INDA      2026-07-24  NEW_SELL             -0.72  47.63
+   EWC      2026-07-24   NEW_BUY              0.87  58.82
+   EWU      2026-07-24   NEW_BUY              0.67  46.70
+   EWA      2026-07-24   NEW_BUY              0.16  28.49
+   EWZ      2026-07-24 HOLD_CASH             -0.13  36.17
+
+Saved full signals payload to weekly_target_trade.csv
+[Mon 07/27/2026 15:12:10.65] Analysis completed. Executing Alpaca Trader... 
+--- STARTING QUANT TRADER EXTREME RUN (Multiplier: 1.0x) ---
+[-] Error fetching account positions: {"message": "unauthorized."}
+
+
+[*] Processing Signal -- Ticker: SPY | Action: NEW_BUY | Z-Strength: 0.58
+[!] Warning: Could not verify pending orders for SPY: {"message": "unauthorized."}
+
+[-] Error fetching price for SPY: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for SPY. Skipping buy.
+
+[*] Processing Signal -- Ticker: QQQ | Action: NEW_BUY | Z-Strength: 0.31
+[!] Warning: Could not verify pending orders for QQQ: {"message": "unauthorized."}
+
+[-] Error fetching price for QQQ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for QQQ. Skipping buy.
+
+[*] Processing Signal -- Ticker: DIA | Action: NEW_BUY | Z-Strength: 0.83
+[!] Warning: Could not verify pending orders for DIA: {"message": "unauthorized."}
+
+[-] Error fetching price for DIA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for DIA. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLK | Action: NEW_BUY | Z-Strength: 0.57
+[!] Warning: Could not verify pending orders for XLK: {"message": "unauthorized."}
+
+[-] Error fetching price for XLK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLK. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLV | Action: NEW_BUY | Z-Strength: 1.54
+[!] Warning: Could not verify pending orders for XLV: {"message": "unauthorized."}
+
+[-] Error fetching price for XLV: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLV. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLF | Action: NEW_BUY | Z-Strength: 1.51
+[!] Warning: Could not verify pending orders for XLF: {"message": "unauthorized."}
+
+[-] Error fetching price for XLF: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLF. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLY | Action: NEW_SELL | Z-Strength: -1.33
+[!] Warning: Could not verify pending orders for XLY: {"message": "unauthorized."}
+
+[+] Liquidation requested for XLY, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: XLP | Action: NEW_BUY | Z-Strength: 0.02
+[!] Warning: Could not verify pending orders for XLP: {"message": "unauthorized."}
+
+[-] Error fetching price for XLP: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLP. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLE | Action: NEW_BUY | Z-Strength: 1.07
+[!] Warning: Could not verify pending orders for XLE: {"message": "unauthorized."}
+
+[-] Error fetching price for XLE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLI | Action: NEW_BUY | Z-Strength: 1.23
+[!] Warning: Could not verify pending orders for XLI: {"message": "unauthorized."}
+
+[-] Error fetching price for XLI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLI. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLB | Action: HOLD_CASH | Z-Strength: -0.25
+[!] Warning: Could not verify pending orders for XLB: {"message": "unauthorized."}
+
+[+] Posture nominal for XLB (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: XLRE | Action: NEW_BUY | Z-Strength: 0.92
+[!] Warning: Could not verify pending orders for XLRE: {"message": "unauthorized."}
+
+[-] Error fetching price for XLRE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLRE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLU | Action: NEW_BUY | Z-Strength: 0.99
+[!] Warning: Could not verify pending orders for XLU: {"message": "unauthorized."}
+
+[-] Error fetching price for XLU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLU. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLC | Action: HOLD_CASH | Z-Strength: -1.87
+[!] Warning: Could not verify pending orders for XLC: {"message": "unauthorized."}
+
+[+] Posture nominal for XLC (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: EEM | Action: NEW_BUY | Z-Strength: 0.24
+[!] Warning: Could not verify pending orders for EEM: {"message": "unauthorized."}
+
+[-] Error fetching price for EEM: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EEM. Skipping buy.
+
+[*] Processing Signal -- Ticker: VWO | Action: NEW_BUY | Z-Strength: 0.13
+[!] Warning: Could not verify pending orders for VWO: {"message": "unauthorized."}
+
+[-] Error fetching price for VWO: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VWO. Skipping buy.
+
+[*] Processing Signal -- Ticker: VEA | Action: NEW_BUY | Z-Strength: 0.42
+[!] Warning: Could not verify pending orders for VEA: {"message": "unauthorized."}
+
+[-] Error fetching price for VEA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VEA. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEFA | Action: NEW_BUY | Z-Strength: 0.52
+[!] Warning: Could not verify pending orders for IEFA: {"message": "unauthorized."}
+
+[-] Error fetching price for IEFA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEFA. Skipping buy.
+
+[*] Processing Signal -- Ticker: VT | Action: NEW_BUY | Z-Strength: 0.52
+[!] Warning: Could not verify pending orders for VT: {"message": "unauthorized."}
+
+[-] Error fetching price for VT: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VT. Skipping buy.
+
+[*] Processing Signal -- Ticker: ACWI | Action: NEW_BUY | Z-Strength: 0.53
+[!] Warning: Could not verify pending orders for ACWI: {"message": "unauthorized."}
+
+[-] Error fetching price for ACWI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for ACWI. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWJ | Action: NEW_BUY | Z-Strength: 0.39
+[!] Warning: Could not verify pending orders for EWJ: {"message": "unauthorized."}
+
+[-] Error fetching price for EWJ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWJ. Skipping buy.
+
+[*] Processing Signal -- Ticker: VGK | Action: NEW_BUY | Z-Strength: 0.61
+[!] Warning: Could not verify pending orders for VGK: {"message": "unauthorized."}
+
+[-] Error fetching price for VGK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VGK. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEUR | Action: NEW_BUY | Z-Strength: 0.6
+[!] Warning: Could not verify pending orders for IEUR: {"message": "unauthorized."}
+
+[-] Error fetching price for IEUR: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEUR. Skipping buy.
+
+[*] Processing Signal -- Ticker: MCHI | Action: HOLD_CASH | Z-Strength: -0.7
+[!] Warning: Could not verify pending orders for MCHI: {"message": "unauthorized."}
+
+[+] Posture nominal for MCHI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: FXI | Action: HOLD_CASH | Z-Strength: -0.3
+[!] Warning: Could not verify pending orders for FXI: {"message": "unauthorized."}
+
+[+] Posture nominal for FXI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: INDA | Action: NEW_SELL | Z-Strength: -0.72
+[!] Warning: Could not verify pending orders for INDA: {"message": "unauthorized."}
+
+[+] Liquidation requested for INDA, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: EWC | Action: NEW_BUY | Z-Strength: 0.87
+[!] Warning: Could not verify pending orders for EWC: {"message": "unauthorized."}
+
+[-] Error fetching price for EWC: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWC. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWU | Action: NEW_BUY | Z-Strength: 0.67
+[!] Warning: Could not verify pending orders for EWU: {"message": "unauthorized."}
+
+[-] Error fetching price for EWU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWU. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWA | Action: NEW_BUY | Z-Strength: 0.16
+[!] Warning: Could not verify pending orders for EWA: {"message": "unauthorized."}
+
+[-] Error fetching price for EWA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWA. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWZ | Action: HOLD_CASH | Z-Strength: -0.13
+[!] Warning: Could not verify pending orders for EWZ: {"message": "unauthorized."}
+
+[+] Posture nominal for EWZ (HOLD_CASH). No trade required.
+[Mon 07/27/2026 15:13:01.37] Starting Weekly Quant Analysis... 
+=== Starting Quant System Run (30 tickers) ===
+
+Fetching data for SPY...
+Fetching data for QQQ...
+Fetching data for DIA...
+Fetching data for XLK...
+Fetching data for XLV...
+Fetching data for XLF...
+Fetching data for XLY...
+Fetching data for XLP...
+Fetching data for XLE...
+Fetching data for XLI...
+Fetching data for XLB...
+Fetching data for XLRE...
+Fetching data for XLU...
+Fetching data for XLC...
+Fetching data for EEM...
+Fetching data for VWO...
+Fetching data for VEA...
+Fetching data for IEFA...
+Fetching data for VT...
+Fetching data for ACWI...
+Fetching data for EWJ...
+Fetching data for VGK...
+Fetching data for IEUR...
+Fetching data for MCHI...
+Fetching data for FXI...
+Fetching data for INDA...
+Fetching data for EWC...
+Fetching data for EWU...
+Fetching data for EWA...
+Fetching data for EWZ...
+
+=== Output Summary ===
+ticker evaluation_date    signal  z_score_strength  close
+   SPY      2026-07-24   NEW_BUY              0.58 738.18
+   QQQ      2026-07-24   NEW_BUY              0.31 691.96
+   DIA      2026-07-24   NEW_BUY              0.83 516.26
+   XLK      2026-07-24   NEW_BUY              0.57 178.45
+   XLV      2026-07-24   NEW_BUY              1.54 161.44
+   XLF      2026-07-24   NEW_BUY              1.51  55.83
+   XLY      2026-07-24  NEW_SELL             -1.33 108.76
+   XLP      2026-07-24   NEW_BUY              0.02  83.21
+   XLE      2026-07-24   NEW_BUY              1.07  59.38
+   XLI      2026-07-24   NEW_BUY              1.23 181.94
+   XLB      2026-07-24 HOLD_CASH             -0.25  50.29
+  XLRE      2026-07-24   NEW_BUY              0.92  44.95
+   XLU      2026-07-24   NEW_BUY              0.99  46.19
+   XLC      2026-07-24 HOLD_CASH             -1.87 105.38
+   EEM      2026-07-24   NEW_BUY              0.24  64.60
+   VWO      2026-07-24   NEW_BUY              0.13  58.10
+   VEA      2026-07-24   NEW_BUY              0.42  69.78
+  IEFA      2026-07-24   NEW_BUY              0.52  95.76
+    VT      2026-07-24   NEW_BUY              0.52 154.31
+  ACWI      2026-07-24   NEW_BUY              0.53 154.34
+   EWJ      2026-07-24   NEW_BUY              0.39  91.10
+   VGK      2026-07-24   NEW_BUY              0.61  87.83
+  IEUR      2026-07-24   NEW_BUY              0.60  74.42
+  MCHI      2026-07-24 HOLD_CASH             -0.70  53.35
+   FXI      2026-07-24 HOLD_CASH             -0.30  34.46
+  INDA      2026-07-24  NEW_SELL             -0.72  47.63
+   EWC      2026-07-24   NEW_BUY              0.87  58.82
+   EWU      2026-07-24   NEW_BUY              0.67  46.70
+   EWA      2026-07-24   NEW_BUY              0.16  28.49
+   EWZ      2026-07-24 HOLD_CASH             -0.13  36.17
+
+Saved full signals payload to weekly_target_trade.csv
+[Mon 07/27/2026 15:13:11.55] Analysis completed. Executing Alpaca Trader... 
+--- STARTING QUANT TRADER EXTREME RUN (Multiplier: 1.0x) ---
+
+[*] Processing Signal -- Ticker: SPY | Action: NEW_BUY | Z-Strength: 0.58
+[-] Error fetching price for SPY: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for SPY. Skipping buy.
+
+[*] Processing Signal -- Ticker: QQQ | Action: NEW_BUY | Z-Strength: 0.31
+[-] Error fetching price for QQQ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for QQQ. Skipping buy.
+
+[*] Processing Signal -- Ticker: DIA | Action: NEW_BUY | Z-Strength: 0.83
+[-] Error fetching price for DIA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for DIA. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLK | Action: NEW_BUY | Z-Strength: 0.57
+[-] Error fetching price for XLK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLK. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLV | Action: NEW_BUY | Z-Strength: 1.54
+[-] Error fetching price for XLV: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLV. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLF | Action: NEW_BUY | Z-Strength: 1.51
+[-] Error fetching price for XLF: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLF. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLY | Action: NEW_SELL | Z-Strength: -1.33
+[+] Liquidation requested for XLY, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: XLP | Action: NEW_BUY | Z-Strength: 0.02
+[-] Error fetching price for XLP: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLP. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLE | Action: NEW_BUY | Z-Strength: 1.07
+[-] Error fetching price for XLE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLI | Action: NEW_BUY | Z-Strength: 1.23
+[-] Error fetching price for XLI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLI. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLB | Action: HOLD_CASH | Z-Strength: -0.25
+[+] Posture nominal for XLB (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: XLRE | Action: NEW_BUY | Z-Strength: 0.92
+[-] Error fetching price for XLRE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLRE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLU | Action: NEW_BUY | Z-Strength: 0.99
+[-] Error fetching price for XLU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLU. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLC | Action: HOLD_CASH | Z-Strength: -1.87
+[+] Posture nominal for XLC (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: EEM | Action: NEW_BUY | Z-Strength: 0.24
+[-] Error fetching price for EEM: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EEM. Skipping buy.
+
+[*] Processing Signal -- Ticker: VWO | Action: NEW_BUY | Z-Strength: 0.13
+[-] Error fetching price for VWO: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VWO. Skipping buy.
+
+[*] Processing Signal -- Ticker: VEA | Action: NEW_BUY | Z-Strength: 0.42
+[-] Error fetching price for VEA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VEA. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEFA | Action: NEW_BUY | Z-Strength: 0.52
+[-] Error fetching price for IEFA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEFA. Skipping buy.
+
+[*] Processing Signal -- Ticker: VT | Action: NEW_BUY | Z-Strength: 0.52
+[-] Error fetching price for VT: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VT. Skipping buy.
+
+[*] Processing Signal -- Ticker: ACWI | Action: NEW_BUY | Z-Strength: 0.53
+[-] Error fetching price for ACWI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for ACWI. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWJ | Action: NEW_BUY | Z-Strength: 0.39
+[-] Error fetching price for EWJ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWJ. Skipping buy.
+
+[*] Processing Signal -- Ticker: VGK | Action: NEW_BUY | Z-Strength: 0.61
+[-] Error fetching price for VGK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VGK. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEUR | Action: NEW_BUY | Z-Strength: 0.6
+[-] Error fetching price for IEUR: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEUR. Skipping buy.
+
+[*] Processing Signal -- Ticker: MCHI | Action: HOLD_CASH | Z-Strength: -0.7
+[+] Posture nominal for MCHI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: FXI | Action: HOLD_CASH | Z-Strength: -0.3
+[+] Posture nominal for FXI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: INDA | Action: NEW_SELL | Z-Strength: -0.72
+[+] Liquidation requested for INDA, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: EWC | Action: NEW_BUY | Z-Strength: 0.87
+[-] Error fetching price for EWC: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWC. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWU | Action: NEW_BUY | Z-Strength: 0.67
+[-] Error fetching price for EWU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWU. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWA | Action: NEW_BUY | Z-Strength: 0.16
+[-] Error fetching price for EWA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWA. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWZ | Action: HOLD_CASH | Z-Strength: -0.13
+[+] Posture nominal for EWZ (HOLD_CASH). No trade required.
+[Mon 07/27/2026 15:16:28.80] Starting Weekly Quant Analysis... 
+=== Starting Quant System Run (30 tickers) ===
+
+Fetching data for SPY...
+Fetching data for QQQ...
+Fetching data for DIA...
+Fetching data for XLK...
+Fetching data for XLV...
+Fetching data for XLF...
+Fetching data for XLY...
+Fetching data for XLP...
+Fetching data for XLE...
+Fetching data for XLI...
+Fetching data for XLB...
+Fetching data for XLRE...
+Fetching data for XLU...
+Fetching data for XLC...
+Fetching data for EEM...
+Fetching data for VWO...
+Fetching data for VEA...
+Fetching data for IEFA...
+Fetching data for VT...
+Fetching data for ACWI...
+Fetching data for EWJ...
+Fetching data for VGK...
+Fetching data for IEUR...
+Fetching data for MCHI...
+Fetching data for FXI...
+Fetching data for INDA...
+Fetching data for EWC...
+Fetching data for EWU...
+Fetching data for EWA...
+Fetching data for EWZ...
+
+=== Output Summary ===
+ticker evaluation_date    signal  z_score_strength  close
+   SPY      2026-07-24   NEW_BUY              0.58 738.18
+   QQQ      2026-07-24   NEW_BUY              0.31 691.96
+   DIA      2026-07-24   NEW_BUY              0.83 516.26
+   XLK      2026-07-24   NEW_BUY              0.57 178.45
+   XLV      2026-07-24   NEW_BUY              1.54 161.44
+   XLF      2026-07-24   NEW_BUY              1.51  55.83
+   XLY      2026-07-24  NEW_SELL             -1.33 108.76
+   XLP      2026-07-24   NEW_BUY              0.02  83.21
+   XLE      2026-07-24   NEW_BUY              1.07  59.38
+   XLI      2026-07-24   NEW_BUY              1.23 181.94
+   XLB      2026-07-24 HOLD_CASH             -0.25  50.29
+  XLRE      2026-07-24   NEW_BUY              0.92  44.95
+   XLU      2026-07-24   NEW_BUY              0.99  46.19
+   XLC      2026-07-24 HOLD_CASH             -1.87 105.38
+   EEM      2026-07-24   NEW_BUY              0.24  64.60
+   VWO      2026-07-24   NEW_BUY              0.13  58.10
+   VEA      2026-07-24   NEW_BUY              0.42  69.78
+  IEFA      2026-07-24   NEW_BUY              0.52  95.76
+    VT      2026-07-24   NEW_BUY              0.52 154.31
+  ACWI      2026-07-24   NEW_BUY              0.53 154.34
+   EWJ      2026-07-24   NEW_BUY              0.39  91.10
+   VGK      2026-07-24   NEW_BUY              0.61  87.83
+  IEUR      2026-07-24   NEW_BUY              0.60  74.42
+  MCHI      2026-07-24 HOLD_CASH             -0.70  53.35
+   FXI      2026-07-24 HOLD_CASH             -0.30  34.46
+  INDA      2026-07-24  NEW_SELL             -0.72  47.63
+   EWC      2026-07-24   NEW_BUY              0.87  58.82
+   EWU      2026-07-24   NEW_BUY              0.67  46.70
+   EWA      2026-07-24   NEW_BUY              0.16  28.49
+   EWZ      2026-07-24 HOLD_CASH             -0.13  36.17
+
+Saved full signals payload to weekly_target_trade.csv
+[Mon 07/27/2026 15:16:39.64] Analysis completed. Executing Alpaca Trader... 
+--- STARTING QUANT TRADER EXTREME RUN (Multiplier: 1.0x) ---
+
+[*] Processing Signal -- Ticker: SPY | Action: NEW_BUY | Z-Strength: 0.58
+[-] Error fetching price for SPY: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for SPY. Skipping buy.
+
+[*] Processing Signal -- Ticker: QQQ | Action: NEW_BUY | Z-Strength: 0.31
+[-] Error fetching price for QQQ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for QQQ. Skipping buy.
+
+[*] Processing Signal -- Ticker: DIA | Action: NEW_BUY | Z-Strength: 0.83
+[-] Error fetching price for DIA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for DIA. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLK | Action: NEW_BUY | Z-Strength: 0.57
+[-] Error fetching price for XLK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLK. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLV | Action: NEW_BUY | Z-Strength: 1.54
+[-] Error fetching price for XLV: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLV. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLF | Action: NEW_BUY | Z-Strength: 1.51
+[-] Error fetching price for XLF: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLF. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLY | Action: NEW_SELL | Z-Strength: -1.33
+[+] Liquidation requested for XLY, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: XLP | Action: NEW_BUY | Z-Strength: 0.02
+[-] Error fetching price for XLP: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLP. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLE | Action: NEW_BUY | Z-Strength: 1.07
+[-] Error fetching price for XLE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLI | Action: NEW_BUY | Z-Strength: 1.23
+[-] Error fetching price for XLI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLI. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLB | Action: HOLD_CASH | Z-Strength: -0.25
+[+] Posture nominal for XLB (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: XLRE | Action: NEW_BUY | Z-Strength: 0.92
+[-] Error fetching price for XLRE: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLRE. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLU | Action: NEW_BUY | Z-Strength: 0.99
+[-] Error fetching price for XLU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for XLU. Skipping buy.
+
+[*] Processing Signal -- Ticker: XLC | Action: HOLD_CASH | Z-Strength: -1.87
+[+] Posture nominal for XLC (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: EEM | Action: NEW_BUY | Z-Strength: 0.24
+[-] Error fetching price for EEM: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EEM. Skipping buy.
+
+[*] Processing Signal -- Ticker: VWO | Action: NEW_BUY | Z-Strength: 0.13
+[-] Error fetching price for VWO: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VWO. Skipping buy.
+
+[*] Processing Signal -- Ticker: VEA | Action: NEW_BUY | Z-Strength: 0.42
+[-] Error fetching price for VEA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VEA. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEFA | Action: NEW_BUY | Z-Strength: 0.52
+[-] Error fetching price for IEFA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEFA. Skipping buy.
+
+[*] Processing Signal -- Ticker: VT | Action: NEW_BUY | Z-Strength: 0.52
+[-] Error fetching price for VT: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VT. Skipping buy.
+
+[*] Processing Signal -- Ticker: ACWI | Action: NEW_BUY | Z-Strength: 0.53
+[-] Error fetching price for ACWI: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for ACWI. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWJ | Action: NEW_BUY | Z-Strength: 0.39
+[-] Error fetching price for EWJ: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWJ. Skipping buy.
+
+[*] Processing Signal -- Ticker: VGK | Action: NEW_BUY | Z-Strength: 0.61
+[-] Error fetching price for VGK: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for VGK. Skipping buy.
+
+[*] Processing Signal -- Ticker: IEUR | Action: NEW_BUY | Z-Strength: 0.6
+[-] Error fetching price for IEUR: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for IEUR. Skipping buy.
+
+[*] Processing Signal -- Ticker: MCHI | Action: HOLD_CASH | Z-Strength: -0.7
+[+] Posture nominal for MCHI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: FXI | Action: HOLD_CASH | Z-Strength: -0.3
+[+] Posture nominal for FXI (HOLD_CASH). No trade required.
+
+[*] Processing Signal -- Ticker: INDA | Action: NEW_SELL | Z-Strength: -0.72
+[+] Liquidation requested for INDA, but position is already 0. Standing down.
+
+[*] Processing Signal -- Ticker: EWC | Action: NEW_BUY | Z-Strength: 0.87
+[-] Error fetching price for EWC: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWC. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWU | Action: NEW_BUY | Z-Strength: 0.67
+[-] Error fetching price for EWU: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWU. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWA | Action: NEW_BUY | Z-Strength: 0.16
+[-] Error fetching price for EWA: 'TradingClient' object has no attribute 'get_latest_trade'
+[-] Could not retrieve price for EWA. Skipping buy.
+
+[*] Processing Signal -- Ticker: EWZ | Action: HOLD_CASH | Z-Strength: -0.13
+[+] Posture nominal for EWZ (HOLD_CASH). No trade required.
