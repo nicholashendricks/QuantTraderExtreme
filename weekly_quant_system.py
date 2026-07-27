@@ -11,8 +11,10 @@ def run_analysis(ticker, start_date, end_date, show_plot=False):
     data = yf.download(ticker, start=start_date, end=end_date)
     
     # Flatten MultiIndex columns if they exist (fix for newer yfinance versions)
+    # Also lowercase column names for backtrader compatibility (expects 'close', 'high', etc.)
     if isinstance(data.columns, pd.MultiIndex):
         data.columns = data.columns.get_level_values(0)
+    data.columns = [col.lower() for col in data.columns]
 
     if data.empty:
         print("No data found.")
