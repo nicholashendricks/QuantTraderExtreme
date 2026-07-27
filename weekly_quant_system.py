@@ -3,10 +3,12 @@ import pandas as pd
 import argparse
 from datetime import date
 
+
 def run_analysis(ticker, start_date, end_date):
     """
-    Simple SMA crossover strategy using pandas (no backtrader dependency).
-    Returns (signal, strength) based on the last bar's close vs SMA-20.
+    Simulates the original backtrader SMA crossover strategy using pandas.
+    Tracks position state across bars to reproduce BUY/SELL/HOLD logic.
+    Returns (signal, strength) based on the last bar.
     """
     print(f"Fetching data for {ticker}...")
     data = yf.download(ticker, start=start_date, end=end_date)
@@ -19,23 +21,39 @@ def run_analysis(ticker, start_date, end_date):
         print(f"  Insufficient data for {ticker}.")
         return ("HOLD", 0.0)
 
-    # Calculate 20-period SMA
     close = data["Close"]
     sma20 = close.rolling(window=20).mean()
 
-    # Get the last values
-    last_close = close.iloc[-1]
-    last_sma = sma20.iloc[-1]
+    # Replicate backtrader SmaStrategy.next() logic by iterating each bar
+    in_position = False
+    signal = "HOLD"
+    strength = 0.0
 
-    strength = (last_close - last_sma) / last_sma
+    for i in range(len(data)):
+        c = close.iloc[i]
+        s = sma20.iloc[i]
 
-    if pd.isna(strength):
-        return ("HOLD", 0.0)
+        if pd.isna(s):
+            continue  # no SMA yet, skip
 
-    if last_close > last_sma:
-        return ("BUY", round(strength, 6))
-    else:
-        return ("HOLD", 0.0)
+        if not in_position:
+            if c > s:
+                in_position = True
+                signal = "BUY"
+                strength = (c - s) / s
+            else:
+                signal = "HOLD"
+                strength = 0.0
+        else:
+            if c < s:
+                in_position = False
+                signal = "SELL"
+                strength = (s - c) / s
+            else:
+                signal = "BUY"
+                strength = (c - s) / s
+
+    return (signal, strength)
 
 
 def get_params_from_csv():
